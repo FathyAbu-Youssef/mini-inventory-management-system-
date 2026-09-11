@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AccessLayer/AccessLayer.csproj" Id="ecaa7c8e-4a72-47e1-99df-f98635c1b139" />
+  <Project Path="BusinessLayer/BusinessLayer.csproj" Id="e3cf2ce0-aa58-4a7b-b766-c265f563f19b" />
+  <Project Path="CommonUtilities/CommonUtilities.csproj" Id="017fc9cb-f406-4b6a-ad4e-0ce303890acc" />
+  <Project Path="MIMS/PresentationLayer.csproj" Id="e072cfe2-74ec-4e05-bec1-37c9fbfca73c" />
+</Solution>
