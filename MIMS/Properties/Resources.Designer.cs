@@ -73,6 +73,26 @@ namespace MIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alert_sign {
+            get {
+                object obj = ResourceManager.GetObject("alert-sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Anker_PowerBank_20000mAh {
+            get {
+                object obj = ResourceManager.GetObject("Anker PowerBank 20000mAh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -96,6 +116,16 @@ namespace MIMS.Properties {
         internal static System.Drawing.Bitmap Details {
             get {
                 object obj = ResourceManager.GetObject("Details", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sony_WH_1000XM5_Headphones {
+            get {
+                object obj = ResourceManager.GetObject("Sony WH-1000XM5 Headphones", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

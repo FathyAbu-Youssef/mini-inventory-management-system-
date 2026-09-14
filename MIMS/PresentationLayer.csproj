@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Products\frmLowStockNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmLowStockNotification.Designer.cs">
+      <DependentUpon>frmLowStockNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products\frmManageProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     <Compile Include="Products\frmShowProductDetails.Designer.cs">
       <DependentUpon>frmShowProductDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Products\ucLowStockNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Products\ucLowStockNotification.Designer.cs">
+      <DependentUpon>ucLowStockNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products\UcProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,11 +90,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Products\frmLowStockNotification.resx">
+      <DependentUpon>frmLowStockNotification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Products\frmManageProducts.resx">
       <DependentUpon>frmManageProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\frmShowProductDetails.resx">
       <DependentUpon>frmShowProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ucLowStockNotification.resx">
+      <DependentUpon>ucLowStockNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\UcProduct.resx">
       <DependentUpon>UcProduct.cs</DependentUpon>
@@ -133,6 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anker PowerBank 20000mAh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sony WH-1000XM5 Headphones.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

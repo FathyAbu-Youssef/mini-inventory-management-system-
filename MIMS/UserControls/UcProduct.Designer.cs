@@ -33,19 +33,19 @@
             this.btndelete = new Guna.UI2.WinForms.Guna2Button();
             this.pbProductImage = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtQuantityInStock = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMinimumQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbMinimumQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbMinimumQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbQuantityInStock = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbProductPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbProductName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbProductID = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtMinimumQuantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtQuantityInStock = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.ProductPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProductImage)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             // ProductPanel
             // 
-            this.ProductPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.ProductPanel.BackColor = System.Drawing.SystemColors.Control;
             this.ProductPanel.BorderRadius = 20;
             this.ProductPanel.Controls.Add(this.btnUpdate);
             this.ProductPanel.Controls.Add(this.btndelete);
@@ -132,6 +132,86 @@
             this.guna2CustomGradientPanel1.TabIndex = 7;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderRadius = 8;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.DefaultText = "";
+            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Location = new System.Drawing.Point(283, 198);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PlaceholderText = "";
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.Size = new System.Drawing.Size(136, 31);
+            this.txtPrice.TabIndex = 19;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrice.Visible = false;
+            // 
+            // txtQuantityInStock
+            // 
+            this.txtQuantityInStock.BorderRadius = 8;
+            this.txtQuantityInStock.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantityInStock.DefaultText = "";
+            this.txtQuantityInStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantityInStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantityInStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantityInStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantityInStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantityInStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQuantityInStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtQuantityInStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantityInStock.Location = new System.Drawing.Point(284, 112);
+            this.txtQuantityInStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtQuantityInStock.Name = "txtQuantityInStock";
+            this.txtQuantityInStock.PlaceholderText = "";
+            this.txtQuantityInStock.SelectedText = "";
+            this.txtQuantityInStock.Size = new System.Drawing.Size(136, 31);
+            this.txtQuantityInStock.TabIndex = 17;
+            this.txtQuantityInStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtQuantityInStock.Visible = false;
+            // 
+            // txtMinimumQuantity
+            // 
+            this.txtMinimumQuantity.BorderRadius = 8;
+            this.txtMinimumQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMinimumQuantity.DefaultText = "";
+            this.txtMinimumQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMinimumQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMinimumQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMinimumQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMinimumQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMinimumQuantity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtMinimumQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtMinimumQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMinimumQuantity.Location = new System.Drawing.Point(277, 64);
+            this.txtMinimumQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMinimumQuantity.Name = "txtMinimumQuantity";
+            this.txtMinimumQuantity.PlaceholderText = "";
+            this.txtMinimumQuantity.SelectedText = "";
+            this.txtMinimumQuantity.Size = new System.Drawing.Size(143, 34);
+            this.txtMinimumQuantity.TabIndex = 11;
+            this.txtMinimumQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMinimumQuantity.Visible = false;
+            // 
+            // lbMinimumQuantity
+            // 
+            this.lbMinimumQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lbMinimumQuantity.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lbMinimumQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lbMinimumQuantity.Location = new System.Drawing.Point(308, 72);
+            this.lbMinimumQuantity.Name = "lbMinimumQuantity";
+            this.lbMinimumQuantity.Size = new System.Drawing.Size(25, 26);
+            this.lbMinimumQuantity.TabIndex = 11;
+            this.lbMinimumQuantity.Text = "??";
+            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -187,17 +267,6 @@
             this.guna2HtmlLabel1.TabIndex = 12;
             this.guna2HtmlLabel1.Text = "Product Name";
             // 
-            // lbMinimumQuantity
-            // 
-            this.lbMinimumQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.lbMinimumQuantity.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lbMinimumQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbMinimumQuantity.Location = new System.Drawing.Point(308, 72);
-            this.lbMinimumQuantity.Name = "lbMinimumQuantity";
-            this.lbMinimumQuantity.Size = new System.Drawing.Size(25, 26);
-            this.lbMinimumQuantity.TabIndex = 11;
-            this.lbMinimumQuantity.Text = "??";
-            // 
             // lbQuantityInStock
             // 
             this.lbQuantityInStock.BackColor = System.Drawing.Color.Transparent;
@@ -242,75 +311,6 @@
             this.lbProductID.Size = new System.Drawing.Size(25, 26);
             this.lbProductID.TabIndex = 7;
             this.lbProductID.Text = "??";
-            // 
-            // txtMinimumQuantity
-            // 
-            this.txtMinimumQuantity.BorderRadius = 8;
-            this.txtMinimumQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMinimumQuantity.DefaultText = "";
-            this.txtMinimumQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMinimumQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMinimumQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMinimumQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMinimumQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMinimumQuantity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.txtMinimumQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtMinimumQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMinimumQuantity.Location = new System.Drawing.Point(277, 64);
-            this.txtMinimumQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMinimumQuantity.Name = "txtMinimumQuantity";
-            this.txtMinimumQuantity.PlaceholderText = "";
-            this.txtMinimumQuantity.SelectedText = "";
-            this.txtMinimumQuantity.Size = new System.Drawing.Size(143, 34);
-            this.txtMinimumQuantity.TabIndex = 11;
-            this.txtMinimumQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMinimumQuantity.Visible = false;
-            // 
-            // txtQuantityInStock
-            // 
-            this.txtQuantityInStock.BorderRadius = 8;
-            this.txtQuantityInStock.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantityInStock.DefaultText = "";
-            this.txtQuantityInStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantityInStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantityInStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityInStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityInStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityInStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.txtQuantityInStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtQuantityInStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityInStock.Location = new System.Drawing.Point(284, 112);
-            this.txtQuantityInStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtQuantityInStock.Name = "txtQuantityInStock";
-            this.txtQuantityInStock.PlaceholderText = "";
-            this.txtQuantityInStock.SelectedText = "";
-            this.txtQuantityInStock.Size = new System.Drawing.Size(136, 31);
-            this.txtQuantityInStock.TabIndex = 17;
-            this.txtQuantityInStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtQuantityInStock.Visible = false;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BorderRadius = 8;
-            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrice.DefaultText = "";
-            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(283, 198);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PlaceholderText = "";
-            this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(136, 31);
-            this.txtPrice.TabIndex = 19;
-            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPrice.Visible = false;
             // 
             // UcProduct
             // 

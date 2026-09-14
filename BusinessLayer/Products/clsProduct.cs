@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,36 @@ namespace BusinessLayer
 {
     public class clsProduct
     {
-        private enum EnMode {AddNewProduct =1 , UpdateProduct=2 } 
+        public class ProductEventArgs : EventArgs
+        {
+            public string ProductName { get; }
+            public int QuantityInStock { get; }
+            public int MiniumumQuantity { get; }
+            public string ImagePath { get;} 
+            public int PrductID { get;}
+            public ProductEventArgs(string ProductName, int QuantityInStock, int MinimumQuantity, string ImagePath,int ProductID)
+            {
+                this.ProductName = ProductName;
+                this.QuantityInStock = QuantityInStock;
+                this.MiniumumQuantity = MinimumQuantity;
+                this.ImagePath = ImagePath;
+                this.PrductID = ProductID;
+            }
+        }
+
+        private enum EnMode {AddNewProduct =1 , UpdateProduct=2 }
+        private EnMode _Mode;
+        public event EventHandler<ProductEventArgs> OnInventoryDecreased;
+
         public int ProductID { get; private set; }
         public string ProductName { get; set; }
         public Decimal ProductPrice { get; set; }
         public int QuantityInStock { get; set; }
         public int MinimumQuantity { get; set; }
         public DateTime? ExpiryDate { get; set; }
-
         public string ImagePath { get; set; }
-        private EnMode _Mode;
+
+
 
         public clsProduct()
         {
@@ -83,12 +104,15 @@ namespace BusinessLayer
                 case EnMode.AddNewProduct:
                     ProductID = _AddNewProduct(ProductName, ProductPrice, QuantityInStock, MinimumQuantity, ExpiryDate, ImagePath);
                     IsSaved = ProductID > 0;
-                    if(IsSaved)
-                    _Mode = EnMode.UpdateProduct;
+                    if (IsSaved)
+                        _Mode = EnMode.UpdateProduct;
                     break;
 
                 case EnMode.UpdateProduct:
+                    bool IsQuantityInStockLessThanOrEquallToMinimumQuantity = QuantityInStock <= MinimumQuantity;
                     IsSaved = _UpdateProduct(ProductID, ProductName, ProductPrice, QuantityInStock, MinimumQuantity, ExpiryDate, ImagePath);
+                    if (IsQuantityInStockLessThanOrEquallToMinimumQuantity && IsSaved) 
+                        OnInventoryDecreased?.Invoke(this, new ProductEventArgs(ProductName, QuantityInStock, MinimumQuantity, ImagePath, ProductID));
                     break;
             }
             return IsSaved;
