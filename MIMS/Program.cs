@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using MIMS.Products;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -19,7 +20,7 @@ namespace MIMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             clsBusinessLayerSettings.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            Application.Run(new Form1());
+            Application.Run(new frmManageProducts());
         }
     }
 }

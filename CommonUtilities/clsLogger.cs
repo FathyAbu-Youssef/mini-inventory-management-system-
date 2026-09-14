@@ -13,6 +13,8 @@ namespace CommonUtilities
         {
             using (EventLog log = new EventLog())
             {
+                log.Source = "Application";
+
                 string ErrorMessage =
                     $"Exception occured in method: {MethodName},\n" +
                     $"FilePath: {FilePath}\n" +
